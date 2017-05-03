@@ -52,8 +52,10 @@ function draw() {
 			z2[x][y] += v2[x][y];
 			z1[x][y] = constrain(z1[x][y], -1, 1);
 			z2[x][y] = constrain(z2[x][y], -1, 1);
-			pixels[unicoord[x][y]]   = (v2[x][y]+1)*128;
-			pixels[unicoord[x][y]+1] = (v2[x][y]+1)*128;
+			
+			var v = (v2[x][y] + 1) * 128;
+			pixels[unicoord[x][y]] = v;
+			pixels[unicoord[x][y]+1] = v;
 		}
 	}
 
